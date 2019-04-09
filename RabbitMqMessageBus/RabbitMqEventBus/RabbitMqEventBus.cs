@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using Common;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -26,11 +25,11 @@ namespace RabbitMqEventBus
                 e.Serialize());
         }
 
-        public void SubscribeTo(string topicName, Action<IEvent> onNewEventCallback)
+        public void SubscribeTo(string topicName, string consumerName, Action<IEvent> onNewEventCallback)
         {
             _channel.ExchangeDeclare(topicName, "topic", true);
-            var queueName = _channel.QueueDeclare().QueueName;
-            _channel.QueueBind(queueName, topicName, "");
+            _channel.QueueDeclare(consumerName, true, false, false);
+            _channel.QueueBind(consumerName, topicName, "");
             var consumer = new EventingBasicConsumer(_channel);
             consumer.Received += (model, ea) =>
             {
@@ -40,7 +39,7 @@ namespace RabbitMqEventBus
                     .OnFailure(error => Console.WriteLine($"Failed to deserialize received message: {error}"));
             };
 
-            _channel.BasicConsume(queueName, true, consumer);
+            _channel.BasicConsume(consumerName, true, consumer);
         }
 
         public void Dispose()

@@ -4,6 +4,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqEventBus", "RabbitMqEventBus\RabbitMqEventBus.csproj", "{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestApplications", "TestApplications", "{C79DD5B4-4417-41BB-A85A-94E7610BF341}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Eventing", "Eventing", "{C6E4572B-C2AF-40E3-B396-0A41A95A85FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventProducer", "TestApplications\Eventing\EventProducer\EventProducer.csproj", "{08238DD9-5F68-47BB-9AEA-2386AC4B0683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEvents", "TestApplications\Eventing\TestEvents\TestEvents.csproj", "{500B2D7D-3008-405D-984E-804468678CB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventConsumer", "TestApplications\Eventing\EventConsumer\EventConsumer.csproj", "{9EC6D3DE-20E9-4C43-8F8C-E1A17A7585B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +28,23 @@ Global
 		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08238DD9-5F68-47BB-9AEA-2386AC4B0683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08238DD9-5F68-47BB-9AEA-2386AC4B0683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08238DD9-5F68-47BB-9AEA-2386AC4B0683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08238DD9-5F68-47BB-9AEA-2386AC4B0683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500B2D7D-3008-405D-984E-804468678CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500B2D7D-3008-405D-984E-804468678CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500B2D7D-3008-405D-984E-804468678CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500B2D7D-3008-405D-984E-804468678CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC6D3DE-20E9-4C43-8F8C-E1A17A7585B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC6D3DE-20E9-4C43-8F8C-E1A17A7585B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC6D3DE-20E9-4C43-8F8C-E1A17A7585B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC6D3DE-20E9-4C43-8F8C-E1A17A7585B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C6E4572B-C2AF-40E3-B396-0A41A95A85FD} = {C79DD5B4-4417-41BB-A85A-94E7610BF341}
+		{08238DD9-5F68-47BB-9AEA-2386AC4B0683} = {C6E4572B-C2AF-40E3-B396-0A41A95A85FD}
+		{500B2D7D-3008-405D-984E-804468678CB6} = {C6E4572B-C2AF-40E3-B396-0A41A95A85FD}
+		{9EC6D3DE-20E9-4C43-8F8C-E1A17A7585B8} = {C6E4572B-C2AF-40E3-B396-0A41A95A85FD}
 	EndGlobalSection
 EndGlobal

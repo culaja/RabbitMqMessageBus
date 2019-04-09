@@ -6,6 +6,6 @@ namespace Common
     {
         void Broadcast(IEvent e);
 
-        void SubscribeTo(string topicName, Action<IEvent> e);
+        void SubscribeTo(string topicName, string consumerName, Action<IEvent> e);
     }
 }
