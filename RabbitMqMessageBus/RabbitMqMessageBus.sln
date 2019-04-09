@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{2EA8AF6B-DB75-4296-8D09-370B14ED07A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqEventBus", "RabbitMqEventBus\RabbitMqEventBus.csproj", "{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{2EA8AF6B-DB75-4296-8D09-370B14ED07A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EA8AF6B-DB75-4296-8D09-370B14ED07A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EA8AF6B-DB75-4296-8D09-370B14ED07A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA441F7B-0092-40EA-8CAC-367BDFBC77DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
