@@ -9,22 +9,22 @@ namespace EventConsumer
         static void Main(string[] args)
         {
             ValidateInput(args);
-            new Program().Run(args[0]);
+            new Program().Run(args[0], args[1]);
         }
 
         private static void ValidateInput(string[] args)
         {
-            if (args.Length < 1)
+            if (args.Length < 2)
             {
-                throw new ArgumentException("You should provide topic name as an argument");
+                throw new ArgumentException("You should provide topic name and consumer name as arguments");
             }
         }
         
-        private void Run(string topicName)
+        private void Run(string topicName, string consumerName)
         {
             using (var eventBus = new RabbitMqEventBus.RabbitMqEventBus(LocalhostRabbitMqServerConfiguration))
             {
-                eventBus.SubscribeTo(topicName, "EventConsumer1", e => WriteLine($"Event received: {e}"));
+                eventBus.SubscribeTo(topicName, consumerName, e => WriteLine($"Event received: {e}"));
             
                 WriteLine("Press enter to exit from application");
                 ReadLine();
